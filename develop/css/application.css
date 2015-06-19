@@ -440,6 +440,8 @@ html {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  background: url("../images/bg.jpg") center top no-repeat;
+  background-size: cover;
 }
 .cassete {
   width: 60vw;
@@ -450,6 +452,8 @@ html {
   position: relative;
   overflow: hidden;
   z-index: 0;
+  background: #fff;
+  box-shadow: 10px 10px #333;
 }
 .cassete:before,
 .cassete:after {
