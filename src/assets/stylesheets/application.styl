@@ -1,8 +1,67 @@
 *
   box-sizing border-box
+  
+cassete-width = 60vw
+cassete-height = cassete-width * 0.638
+cassete-screw-padding = 0.5vw
+  
 
 html
   font-size 10px
+  height 100%
 
 .page
   color #000
+  height 100%
+  display flex
+
+
+.cassete
+  width cassete-width
+  height cassete-height
+  border-radius ( cassete-width / 50 )
+  margin auto
+  border 3px solid #000
+  position relative
+  
+
+.cassete-screw
+  width 1.5vw
+  height 1.5vw
+  border-radius 50%
+  border 2px solid #000
+  position absolute
+  overflow hidden
+  
+  &:after
+    content '×'
+    font-size 1.5vw
+    display inline-block
+    width 100%
+    height 100%
+    left 0
+    top 0
+    text-align center
+    line-height 0.8vw
+    
+  
+  &--position-left-top
+    left cassete-screw-padding
+    top cassete-screw-padding
+    transform rotate(15deg)
+    
+    
+  &--position-left-bottom
+    left cassete-screw-padding
+    bottom cassete-screw-padding
+    transform rotate(7deg)
+    
+  &--position-right-top
+    right cassete-screw-padding
+    top cassete-screw-padding
+    transform rotate(30deg)
+    
+  &--position-right-bottom
+    right cassete-screw-padding
+    bottom cassete-screw-padding
+    transform rotate(22deg)
