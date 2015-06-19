@@ -444,7 +444,7 @@ html {
 .cassete {
   width: 60vw;
   height: 38.28vw;
-  border-radius: 1.2vw;
+  border-radius: 1.8vw;
   margin: auto;
   border: 3px solid #000;
   position: relative;
@@ -476,8 +476,8 @@ html {
           transform: translateX(-3px);
 }
 .cassete-screw {
-  width: 3vw;
-  height: 3vw;
+  width: 2.7vw;
+  height: 2.7vw;
   border-radius: 50%;
   border: 2px solid #333;
   position: absolute;
@@ -504,29 +504,29 @@ html {
   height: 60%;
 }
 .cassete-screw--position-left-top {
-  left: 0.5vw;
-  top: 0.5vw;
+  left: 0.3vw;
+  top: 0.3vw;
   -webkit-transform: rotate(15deg);
       -ms-transform: rotate(15deg);
           transform: rotate(15deg);
 }
 .cassete-screw--position-left-bottom {
-  left: 0.5vw;
-  bottom: 0.5vw;
+  left: 0.3vw;
+  bottom: 0.3vw;
   -webkit-transform: rotate(7deg);
       -ms-transform: rotate(7deg);
           transform: rotate(7deg);
 }
 .cassete-screw--position-right-top {
-  right: 0.5vw;
-  top: 0.5vw;
+  right: 0.3vw;
+  top: 0.3vw;
   -webkit-transform: rotate(30deg);
       -ms-transform: rotate(30deg);
           transform: rotate(30deg);
 }
 .cassete-screw--position-right-bottom {
-  right: 0.5vw;
-  bottom: 0.5vw;
+  right: 0.3vw;
+  bottom: 0.3vw;
   -webkit-transform: rotate(22deg);
       -ms-transform: rotate(22deg);
           transform: rotate(22deg);
@@ -595,4 +595,16 @@ html {
 }
 .cassete-protrusion__hole:nth-child(4) {
   right: 3vw;
+}
+.cassete-sticker {
+  width: 53.4vw;
+  height: 24vw;
+  border-radius: 1.5vw;
+  border: 1px solid #666;
+  position: absolute;
+  top: 3vw;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
 }

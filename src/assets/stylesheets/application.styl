@@ -3,7 +3,7 @@
   
 cassete-width = 60vw
 cassete-height = cassete-width * 0.638
-cassete-screw-padding = 0.5vw
+cassete-screw-padding = cassete-width * 0.005
   
 
 html
@@ -19,7 +19,7 @@ html
 .cassete
   width cassete-width
   height cassete-height
-  border-radius ( cassete-width / 50 )
+  border-radius cassete-width * 0.03
   margin auto
   border 3px solid #000
   position relative
@@ -48,8 +48,8 @@ html
   
 
 .cassete-screw
-  width cassete-width * 0.05
-  height cassete-width * 0.05
+  width cassete-width * 0.045
+  height cassete-width * 0.045
   border-radius 50%
   border 2px solid #333
   position absolute
@@ -157,3 +157,13 @@ html
   &:nth-child(4)
     right cassete-width * 0.05
   
+
+.cassete-sticker
+  width cassete-width * 0.89
+  height cassete-width * 0.4
+  border-radius cassete-width * 0.025
+  border 1px solid #666
+  position absolute
+  top cassete-width * 0.05
+  left 50%
+  transform translate(-50%)
