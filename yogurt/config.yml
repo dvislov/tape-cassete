@@ -1,0 +1,41 @@
+webserver:
+  root_path: "../develop"
+  port: 8000
+
+paths:
+  jade:
+    src: '../src/templates/*.jade'
+    src_shared: '../src/templates/shared/*.jade'
+    develop_compile: '../develop'
+
+  stylus:
+    base: '../src/assets/stylesheets/**/*.styl'
+    src: '../src/assets/stylesheets/application.styl'
+    compile: '../develop/css/stylus.css'
+    develop_compile: '../develop/css'
+
+  coffee:
+    watch: '../src/assets/javascripts/*.coffee'
+    src: '../src/assets/javascripts/application.coffee'
+    dest: '../develop/js/'
+
+  sprite:
+    src: '../src/assets/images/sprite/*.png'
+    develop_compile_images: '../develop/images'
+    develop_compile_styles: '../src/assets/stylesheets/'
+
+  fonts:
+    src: '../src/assets/fonts/**.*'
+    dest: '../develop/fonts'
+
+  images:
+    src: ['../src/assets/images/**.*', '!../src/assets/images/sprite/**.*']
+    dest: '../develop/images'
+
+  vendor:
+    css:
+      src: '../src/vendor/stylesheets/*.css'
+      concat: '../develop/css/vendor.css'
+
+compile:
+  css: '../develop/css/application.css'
