@@ -448,12 +448,14 @@ html {
   margin: auto;
   border: 3px solid #000;
   position: relative;
+  overflow: hidden;
+  z-index: 0;
 }
 .cassete:before,
 .cassete:after {
   content: '';
   font-size: 0;
-  width: 0.75vw;
+  width: 0.6vw;
   height: 10vw;
   border: 3px solid #000;
   position: absolute;
@@ -461,24 +463,25 @@ html {
 }
 .cassete:after {
   border-left: none;
-  right: -0.75vw;
+  right: -0.6vw;
   -webkit-transform: translateX(3px);
       -ms-transform: translateX(3px);
           transform: translateX(3px);
 }
 .cassete:before {
   border-right: none;
-  left: -0.75vw;
+  left: -0.6vw;
   -webkit-transform: translateX(-3px);
       -ms-transform: translateX(-3px);
           transform: translateX(-3px);
 }
 .cassete-screw {
-  width: 1.8vw;
-  height: 1.8vw;
+  width: 3vw;
+  height: 3vw;
   border-radius: 50%;
-  border: 2px solid #000;
+  border: 2px solid #333;
   position: absolute;
+  z-index: 20;
 }
 .cassete-screw:before,
 .cassete-screw:after {
@@ -487,18 +490,18 @@ html {
   position: absolute;
   left: 50%;
   top: 50%;
-  background-color: #000;
+  background-color: #333;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 .cassete-screw:before {
-  width: 0.8vw;
-  height: 2px;
+  width: 60%;
+  height: 3px;
 }
 .cassete-screw:after {
-  width: 2px;
-  height: 0.8vw;
+  width: 3px;
+  height: 60%;
 }
 .cassete-screw--position-left-top {
   left: 0.5vw;
@@ -527,4 +530,69 @@ html {
   -webkit-transform: rotate(22deg);
       -ms-transform: rotate(22deg);
           transform: rotate(22deg);
+}
+.cassete-screw--position-protrusion {
+  -webkit-transform: rotate(7deg) translate(-50%);
+      -ms-transform: rotate(7deg) translate(-50%);
+          transform: rotate(7deg) translate(-50%);
+  left: 50%;
+  top: 1.5vw;
+}
+.cassete-protrusion {
+  border-bottom: 9vw solid #000;
+  width: 40.800000000000004vw;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  border-left: 2.5vw solid transparent;
+  border-right: 2.5vw solid transparent;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+  z-index: 10;
+}
+.cassete-protrusion:after {
+  content: '';
+  display: block;
+  border-bottom: 9vw solid #fff;
+  width: 99%;
+  height: 0;
+  position: absolute;
+  top: 3px;
+  border-left: 2.5vw solid transparent;
+  border-right: 2.5vw solid transparent;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+  z-index: 12;
+}
+.cassete-protrusion__hole {
+  width: 3vw;
+  height: 3vw;
+  position: absolute;
+  z-index: 20;
+  border-radius: 50%;
+  border: 3px solid #000;
+}
+.cassete-protrusion__hole--type-outside {
+  top: 5.399999999999999vw;
+}
+.cassete-protrusion__hole--type-inside {
+  top: 5.100000000000001vw;
+  width: 2.7vw;
+  height: 2.7vw;
+}
+.cassete-protrusion__hole:nth-child(1) {
+  left: 3vw;
+}
+.cassete-protrusion__hole:nth-child(2) {
+  left: 9vw;
+}
+.cassete-protrusion__hole:nth-child(3) {
+  right: 9vw;
+}
+.cassete-protrusion__hole:nth-child(4) {
+  right: 3vw;
 }

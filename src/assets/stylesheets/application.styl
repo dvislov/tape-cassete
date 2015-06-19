@@ -23,12 +23,14 @@ html
   margin auto
   border 3px solid #000
   position relative
+  overflow hidden
+  z-index 0
   
   &:before,
   &:after
     content ''
     font-size 0
-    width 0.75vw
+    width 0.6vw
     height 10vw
     border 3px solid #000
     position absolute
@@ -36,21 +38,22 @@ html
     
   &:after
     border-left none
-    right -0.75vw
+    right -0.6vw
     transform translateX(3px)
     
   &:before
     border-right none
-    left -0.75vw
+    left -0.6vw
     transform translateX(-3px)
   
 
 .cassete-screw
-  width 1.8vw
-  height 1.8vw
+  width cassete-width * 0.05
+  height cassete-width * 0.05
   border-radius 50%
-  border 2px solid #000
+  border 2px solid #333
   position absolute
+  z-index 20
   
   &:before,
   &:after
@@ -59,16 +62,16 @@ html
     position absolute
     left 50%
     top 50%
-    background-color #000
+    background-color #333
     transform translate(-50%, -50%)
     
   &:before
-    width 0.8vw
-    height 2px
+    width 60%
+    height 3px
   
   &:after
-    width 2px
-    height 0.8vw
+    width 3px
+    height 60%
     
   
   &--position-left-top
@@ -91,3 +94,66 @@ html
     right cassete-screw-padding
     bottom cassete-screw-padding
     transform rotate(22deg)
+    
+  &--position-protrusion
+    transform rotate(7deg) translate(-50%)
+    left 50%
+    top 1.5vw
+    
+
+
+.cassete-protrusion
+  border-bottom cassete-width * 0.15 solid #000
+  width cassete-width * 0.68
+  height 0
+  position absolute
+  bottom 0
+  border-left 2.5vw solid transparent
+  border-right 2.5vw solid transparent
+  left 50%
+  transform translate(-50%)
+  z-index 10
+  
+  &:after
+    content ''
+    display block
+    border-bottom cassete-width * 0.15 solid #fff
+    width 99%
+    height 0
+    position absolute
+    top 3px
+    border-left 2.5vw solid transparent
+    border-right 2.5vw solid transparent
+    left 50%
+    transform translate(-50%)
+    z-index 12
+    
+
+.cassete-protrusion__hole
+  width cassete-width * 0.05
+  height cassete-width * 0.05
+  position absolute
+  z-index 20
+  border-radius 50%
+  border: 3px solid #000
+  
+  &--type-outside
+    top cassete-width * 0.09
+    
+  &--type-inside
+    top cassete-width * 0.085
+    width cassete-width * 0.045
+    height cassete-width * 0.045
+    
+  &:nth-child(1)
+    left cassete-width * 0.05
+    
+  &:nth-child(2)
+    left cassete-width * 0.15
+    
+  &:nth-child(3)
+    right cassete-width * 0.15
+  
+  &:nth-child(4)
+    right cassete-width * 0.05
+  
