@@ -24,36 +24,51 @@ html
   border 3px solid #000
   position relative
   
-
-.cassete-screw
-  width 1.5vw
-  height 1.5vw
-  border-radius 50%
-  border 2px solid #000
-  position absolute
-  overflow hidden
-  
-  &:before
-    content ''
-    font-size 0
-    width 0.8vw
-    height 2px
-    position absolute
-    left 50%
-    top 50%
-    background-color #000
-    transform translate(-50%, -50%)
-  
+  &:before,
   &:after
     content ''
     font-size 0
-    width 2px
-    height 0.8vw
+    width 0.75vw
+    height 10vw
+    border 3px solid #000
+    position absolute
+    bottom 2.5vw
+    
+  &:after
+    border-left none
+    right -0.75vw
+    transform translateX(3px)
+    
+  &:before
+    border-right none
+    left -0.75vw
+    transform translateX(-3px)
+  
+
+.cassete-screw
+  width 1.8vw
+  height 1.8vw
+  border-radius 50%
+  border 2px solid #000
+  position absolute
+  
+  &:before,
+  &:after
+    content ''
+    font-size 0
     position absolute
     left 50%
     top 50%
     background-color #000
     transform translate(-50%, -50%)
+    
+  &:before
+    width 0.8vw
+    height 2px
+  
+  &:after
+    width 2px
+    height 0.8vw
     
   
   &--position-left-top

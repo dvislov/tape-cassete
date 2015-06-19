@@ -449,32 +449,41 @@ html {
   border: 3px solid #000;
   position: relative;
 }
+.cassete:before,
+.cassete:after {
+  content: '';
+  font-size: 0;
+  width: 0.75vw;
+  height: 10vw;
+  border: 3px solid #000;
+  position: absolute;
+  bottom: 2.5vw;
+}
+.cassete:after {
+  border-left: none;
+  right: -0.75vw;
+  -webkit-transform: translateX(3px);
+      -ms-transform: translateX(3px);
+          transform: translateX(3px);
+}
+.cassete:before {
+  border-right: none;
+  left: -0.75vw;
+  -webkit-transform: translateX(-3px);
+      -ms-transform: translateX(-3px);
+          transform: translateX(-3px);
+}
 .cassete-screw {
-  width: 1.5vw;
-  height: 1.5vw;
+  width: 1.8vw;
+  height: 1.8vw;
   border-radius: 50%;
   border: 2px solid #000;
   position: absolute;
-  overflow: hidden;
 }
-.cassete-screw:before {
-  content: '';
-  font-size: 0;
-  width: 0.8vw;
-  height: 2px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  background-color: #000;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
+.cassete-screw:before,
 .cassete-screw:after {
   content: '';
   font-size: 0;
-  width: 2px;
-  height: 0.8vw;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -482,6 +491,14 @@ html {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+.cassete-screw:before {
+  width: 0.8vw;
+  height: 2px;
+}
+.cassete-screw:after {
+  width: 2px;
+  height: 0.8vw;
 }
 .cassete-screw--position-left-top {
   left: 0.5vw;
