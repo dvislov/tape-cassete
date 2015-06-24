@@ -612,3 +612,51 @@ html {
       -ms-transform: translate(-50%);
           transform: translate(-50%);
 }
+.cassete-middleton {
+  width: 36vw;
+  height: 10.200000000000001vw;
+  position: absolute;
+  top: 9vw;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+  border: 1.2vw solid #666;
+  border-radius: 1.2vw;
+  overflow: hidden;
+}
+.cassete-coil {
+  box-sizing: content-box;
+  width: 13.2vw;
+  height: 13.2vw;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #4f3127;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.cassete-coil:after {
+  content: '';
+  display: block;
+  width: 6.6vw;
+  height: 6.6vw;
+  border: 1px solid #000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.cassete-coil--type-left {
+  border-width: 2.4vw;
+  left: -5.4vw;
+}
+.cassete-coil--type-right {
+  border-width: 7.199999999999999vw;
+  right: -10.2vw;
+}

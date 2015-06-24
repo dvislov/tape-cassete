@@ -1,10 +1,10 @@
 *
   box-sizing border-box
-  
+
 cassete-width = 60vw
 cassete-height = cassete-width * 0.638
 cassete-screw-padding = cassete-width * 0.005
-  
+
 
 html
   font-size 10px
@@ -29,7 +29,7 @@ html
   z-index 0
   background #fff
   box-shadow 10px 10px #333
-  
+
   &:before,
   &:after
     content ''
@@ -39,17 +39,17 @@ html
     border 3px solid #000
     position absolute
     bottom 2.5vw
-    
+
   &:after
     border-left none
     right -0.6vw
     transform translateX(3px)
-    
+
   &:before
     border-right none
     left -0.6vw
     transform translateX(-3px)
-  
+
 
 .cassete-screw
   width cassete-width * 0.045
@@ -58,7 +58,7 @@ html
   border 2px solid #333
   position absolute
   z-index 20
-  
+
   &:before,
   &:after
     content ''
@@ -68,42 +68,42 @@ html
     top 50%
     background-color #333
     transform translate(-50%, -50%)
-    
+
   &:before
     width 60%
     height 3px
-  
+
   &:after
     width 3px
     height 60%
-    
-  
+
+
   &--position-left-top
     left cassete-screw-padding
     top cassete-screw-padding
     transform rotate(15deg)
-    
-    
+
+
   &--position-left-bottom
     left cassete-screw-padding
     bottom cassete-screw-padding
     transform rotate(7deg)
-    
+
   &--position-right-top
     right cassete-screw-padding
     top cassete-screw-padding
     transform rotate(30deg)
-    
+
   &--position-right-bottom
     right cassete-screw-padding
     bottom cassete-screw-padding
     transform rotate(22deg)
-    
+
   &--position-protrusion
     transform rotate(7deg) translate(-50%)
     left 50%
     top 1.5vw
-    
+
 
 
 .cassete-protrusion
@@ -117,7 +117,7 @@ html
   left 50%
   transform translate(-50%)
   z-index 10
-  
+
   &:after
     content ''
     display block
@@ -131,7 +131,7 @@ html
     left 50%
     transform translate(-50%)
     z-index 12
-    
+
 
 .cassete-protrusion__hole
   width cassete-width * 0.05
@@ -140,27 +140,27 @@ html
   z-index 20
   border-radius 50%
   border: 3px solid #000
-  
+
   &--type-outside
     top cassete-width * 0.09
-    
+
   &--type-inside
     top cassete-width * 0.085
     width cassete-width * 0.045
     height cassete-width * 0.045
-    
+
   &:nth-child(1)
     left cassete-width * 0.05
-    
+
   &:nth-child(2)
     left cassete-width * 0.15
-    
+
   &:nth-child(3)
     right cassete-width * 0.15
-  
+
   &:nth-child(4)
     right cassete-width * 0.05
-  
+
 
 .cassete-sticker
   width cassete-width * 0.89
@@ -171,3 +171,46 @@ html
   top cassete-width * 0.05
   left 50%
   transform translate(-50%)
+
+.cassete-middleton
+  width cassete-width * 0.6
+  height cassete-width * 0.17
+  position absolute
+  top cassete-width * 0.15
+  left 50%
+  transform translate(-50%)
+  border cassete-width * 0.02 solid #666
+  border-radius cassete-width * 0.02
+  overflow hidden
+
+
+.cassete-coil
+  box-sizing content-box
+  width cassete-width * 0.22
+  height cassete-width * 0.22
+  border-radius 50%
+  border-style solid
+  border-color #4f3127
+  position absolute
+  top 50%
+  transform translateY(-50%)
+
+  &:after
+    content ''
+    display block
+    width cassete-width * 0.11
+    height cassete-width * 0.11
+    border 1px solid #000
+    position absolute
+    left 50%
+    top 50%
+    border-radius 50%
+    transform translate(-50%, -50%)
+
+  &--type-left
+    border-width cassete-width * 0.04
+    left (-1) * (cassete-width * 0.05 + cassete-width * 0.04)
+
+  &--type-right
+    border-width cassete-width * 0.12
+    right (-1) * (cassete-width * 0.05 + cassete-width * 0.12)
