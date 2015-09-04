@@ -1,7 +1,7 @@
 *
   box-sizing border-box
 
-cassete-width = 60vw
+cassete-width = 45vw
 cassete-height = cassete-width * 0.638
 cassete-screw-padding = cassete-width * 0.005
 
@@ -167,10 +167,39 @@ html
   height cassete-width * 0.4
   border-radius cassete-width * 0.025
   border 1px solid #666
+  background #F0F8BF
   position absolute
   top cassete-width * 0.05
   left 50%
   transform translate(-50%)
+
+.cassete-sticker__text
+  padding: cassete-width * 0.015 cassete-width * 0.05 0
+  position relative
+
+.cassete-sticker__textLine
+  height cassete-width * 0.035
+  border-bottom 1px solid #999
+
+.cassete-sticker__textWord
+  position absolute
+  font-family 'Indie Flower', cursive
+  left cassete-width * 0.2
+  top cassete-width * 0.05
+  font-size cassete-width * 0.04
+  line-height cassete-width * 0.04
+  transform: rotate(-1deg)
+
+.casette-sticker__pic
+  display block
+  position absolute
+  left cassete-width * 0.1
+  top cassete-width * 0.048
+  width cassete-width * 0.075
+  height cassete-width * 0.075
+  transform rotate(-5deg)
+  box-shadow 1px 1px 0 0 #666
+
 
 .cassete-middleton
   width cassete-width * 0.6
@@ -180,6 +209,7 @@ html
   left 50%
   transform translate(-50%)
   border cassete-width * 0.02 solid #666
+  background-color #fff
   border-radius cassete-width * 0.02
   overflow hidden
 

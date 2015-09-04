@@ -444,9 +444,9 @@ html {
   background-size: cover;
 }
 .cassete {
-  width: 60vw;
-  height: 38.28vw;
-  border-radius: 1.8vw;
+  width: 45vw;
+  height: 28.71vw;
+  border-radius: 1.35vw;
   margin: auto;
   border: 3px solid #000;
   position: relative;
@@ -480,8 +480,8 @@ html {
           transform: translateX(-3px);
 }
 .cassete-screw {
-  width: 2.7vw;
-  height: 2.7vw;
+  width: 2.025vw;
+  height: 2.025vw;
   border-radius: 50%;
   border: 2px solid #333;
   position: absolute;
@@ -508,29 +508,29 @@ html {
   height: 60%;
 }
 .cassete-screw--position-left-top {
-  left: 0.3vw;
-  top: 0.3vw;
+  left: 0.225vw;
+  top: 0.225vw;
   -webkit-transform: rotate(15deg);
       -ms-transform: rotate(15deg);
           transform: rotate(15deg);
 }
 .cassete-screw--position-left-bottom {
-  left: 0.3vw;
-  bottom: 0.3vw;
+  left: 0.225vw;
+  bottom: 0.225vw;
   -webkit-transform: rotate(7deg);
       -ms-transform: rotate(7deg);
           transform: rotate(7deg);
 }
 .cassete-screw--position-right-top {
-  right: 0.3vw;
-  top: 0.3vw;
+  right: 0.225vw;
+  top: 0.225vw;
   -webkit-transform: rotate(30deg);
       -ms-transform: rotate(30deg);
           transform: rotate(30deg);
 }
 .cassete-screw--position-right-bottom {
-  right: 0.3vw;
-  bottom: 0.3vw;
+  right: 0.225vw;
+  bottom: 0.225vw;
   -webkit-transform: rotate(22deg);
       -ms-transform: rotate(22deg);
           transform: rotate(22deg);
@@ -543,8 +543,8 @@ html {
   top: 1.5vw;
 }
 .cassete-protrusion {
-  border-bottom: 9vw solid #000;
-  width: 40.800000000000004vw;
+  border-bottom: 6.75vw solid #000;
+  width: 30.6vw;
   height: 0;
   position: absolute;
   bottom: 0;
@@ -559,7 +559,7 @@ html {
 .cassete-protrusion:after {
   content: '';
   display: block;
-  border-bottom: 9vw solid #fff;
+  border-bottom: 6.75vw solid #fff;
   width: 99%;
   height: 0;
   position: absolute;
@@ -573,62 +573,95 @@ html {
   z-index: 12;
 }
 .cassete-protrusion__hole {
-  width: 3vw;
-  height: 3vw;
+  width: 2.25vw;
+  height: 2.25vw;
   position: absolute;
   z-index: 20;
   border-radius: 50%;
   border: 3px solid #000;
 }
 .cassete-protrusion__hole--type-outside {
-  top: 5.399999999999999vw;
+  top: 4.05vw;
 }
 .cassete-protrusion__hole--type-inside {
-  top: 5.100000000000001vw;
-  width: 2.7vw;
-  height: 2.7vw;
+  top: 3.825vw;
+  width: 2.025vw;
+  height: 2.025vw;
 }
 .cassete-protrusion__hole:nth-child(1) {
-  left: 3vw;
+  left: 2.25vw;
 }
 .cassete-protrusion__hole:nth-child(2) {
-  left: 9vw;
+  left: 6.75vw;
 }
 .cassete-protrusion__hole:nth-child(3) {
-  right: 9vw;
+  right: 6.75vw;
 }
 .cassete-protrusion__hole:nth-child(4) {
-  right: 3vw;
+  right: 2.25vw;
 }
 .cassete-sticker {
-  width: 53.4vw;
-  height: 24vw;
-  border-radius: 1.5vw;
+  width: 40.05vw;
+  height: 18vw;
+  border-radius: 1.125vw;
   border: 1px solid #666;
+  background: #f0f8bf;
   position: absolute;
-  top: 3vw;
+  top: 2.25vw;
   left: 50%;
   -webkit-transform: translate(-50%);
       -ms-transform: translate(-50%);
           transform: translate(-50%);
 }
-.cassete-middleton {
-  width: 36vw;
-  height: 10.200000000000001vw;
+.cassete-sticker__text {
+  padding: 0.675vw 2.25vw 0;
+  position: relative;
+}
+.cassete-sticker__textLine {
+  height: 1.575vw;
+  border-bottom: 1px solid #999;
+}
+.cassete-sticker__textWord {
   position: absolute;
-  top: 9vw;
+  font-family: 'Indie Flower', cursive;
+  left: 9vw;
+  top: 2.25vw;
+  font-size: 1.8vw;
+  line-height: 1.8vw;
+  -webkit-transform: rotate(-1deg);
+      -ms-transform: rotate(-1deg);
+          transform: rotate(-1deg);
+}
+.casette-sticker__pic {
+  display: block;
+  position: absolute;
+  left: 4.5vw;
+  top: 2.16vw;
+  width: 3.375vw;
+  height: 3.375vw;
+  -webkit-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  box-shadow: 1px 1px 0 0 #666;
+}
+.cassete-middleton {
+  width: 27vw;
+  height: 7.65vw;
+  position: absolute;
+  top: 6.75vw;
   left: 50%;
   -webkit-transform: translate(-50%);
       -ms-transform: translate(-50%);
           transform: translate(-50%);
-  border: 1.2vw solid #666;
-  border-radius: 1.2vw;
+  border: 0.9vw solid #666;
+  background-color: #fff;
+  border-radius: 0.9vw;
   overflow: hidden;
 }
 .cassete-coil {
   box-sizing: content-box;
-  width: 13.2vw;
-  height: 13.2vw;
+  width: 9.9vw;
+  height: 9.9vw;
   border-radius: 50%;
   border-style: solid;
   border-color: #4f3127;
@@ -641,8 +674,8 @@ html {
 .cassete-coil:after {
   content: '';
   display: block;
-  width: 6.6vw;
-  height: 6.6vw;
+  width: 4.95vw;
+  height: 4.95vw;
   border: 1px solid #000;
   position: absolute;
   left: 50%;
@@ -653,10 +686,10 @@ html {
           transform: translate(-50%, -50%);
 }
 .cassete-coil--type-left {
-  border-width: 2.4vw;
-  left: -5.4vw;
+  border-width: 1.8vw;
+  left: -4.05vw;
 }
 .cassete-coil--type-right {
-  border-width: 7.199999999999999vw;
-  right: -10.2vw;
+  border-width: 5.399999999999999vw;
+  right: -7.649999999999999vw;
 }
