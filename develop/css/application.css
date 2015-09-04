@@ -693,6 +693,20 @@ html {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -webkit-animation-name: coil;
+          animation-name: coil;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.cassete-coil__gear--size-big {
+  -webkit-animation-duration: 2.2s;
+          animation-duration: 2.2s;
+}
+.cassete-coil__gear--size-small {
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
 }
 .cassete-coil__teeth {
   width: 0.675vw;
@@ -703,50 +717,78 @@ html {
   top: 50%;
 }
 .cassete-coil__teeth:nth-child(1) {
-  -webkit-transform: translateX(1.498557159vw) translateY(0.675vw) rotate(-60deg);
-      -ms-transform: translateX(1.498557159vw) translateY(0.675vw) rotate(-60deg);
-          transform: translateX(1.498557159vw) translateY(0.675vw) rotate(-60deg);
+  -webkit-transform: translateX(1.633557159vw) translateY(0.675vw) rotate(-60deg);
+      -ms-transform: translateX(1.633557159vw) translateY(0.675vw) rotate(-60deg);
+          transform: translateX(1.633557159vw) translateY(0.675vw) rotate(-60deg);
 }
 .cassete-coil__teeth:nth-child(1):after {
   content: 0.866025404;
 }
 .cassete-coil__teeth:nth-child(2) {
-  -webkit-transform: translateX(1.498557159vw) translateY(-1.575vw) rotate(-120deg);
-      -ms-transform: translateX(1.498557159vw) translateY(-1.575vw) rotate(-120deg);
-          transform: translateX(1.498557159vw) translateY(-1.575vw) rotate(-120deg);
+  -webkit-transform: translateX(1.633557159vw) translateY(-1.575vw) rotate(-120deg);
+      -ms-transform: translateX(1.633557159vw) translateY(-1.575vw) rotate(-120deg);
+          transform: translateX(1.633557159vw) translateY(-1.575vw) rotate(-120deg);
 }
 .cassete-coil__teeth:nth-child(2):after {
   content: 0.866025404;
 }
 .cassete-coil__teeth:nth-child(3) {
-  -webkit-transform: translateX(-0.45vw) translateY(-2.7vw) rotate(-180deg);
-      -ms-transform: translateX(-0.45vw) translateY(-2.7vw) rotate(-180deg);
-          transform: translateX(-0.45vw) translateY(-2.7vw) rotate(-180deg);
+  -webkit-transform: translateX(-0.315vw) translateY(-2.7vw) rotate(-180deg);
+      -ms-transform: translateX(-0.315vw) translateY(-2.7vw) rotate(-180deg);
+          transform: translateX(-0.315vw) translateY(-2.7vw) rotate(-180deg);
 }
 .cassete-coil__teeth:nth-child(3):after {
   content: 0;
 }
 .cassete-coil__teeth:nth-child(4) {
-  -webkit-transform: translateX(-2.398557159vw) translateY(-1.575vw) rotate(-240deg);
-      -ms-transform: translateX(-2.398557159vw) translateY(-1.575vw) rotate(-240deg);
-          transform: translateX(-2.398557159vw) translateY(-1.575vw) rotate(-240deg);
+  -webkit-transform: translateX(-2.263557159vw) translateY(-1.575vw) rotate(-240deg);
+      -ms-transform: translateX(-2.263557159vw) translateY(-1.575vw) rotate(-240deg);
+          transform: translateX(-2.263557159vw) translateY(-1.575vw) rotate(-240deg);
 }
 .cassete-coil__teeth:nth-child(4):after {
   content: -0.866025404;
 }
 .cassete-coil__teeth:nth-child(5) {
-  -webkit-transform: translateX(-2.398557159vw) translateY(0.675vw) rotate(-300deg);
-      -ms-transform: translateX(-2.398557159vw) translateY(0.675vw) rotate(-300deg);
-          transform: translateX(-2.398557159vw) translateY(0.675vw) rotate(-300deg);
+  -webkit-transform: translateX(-2.263557159vw) translateY(0.675vw) rotate(-300deg);
+      -ms-transform: translateX(-2.263557159vw) translateY(0.675vw) rotate(-300deg);
+          transform: translateX(-2.263557159vw) translateY(0.675vw) rotate(-300deg);
 }
 .cassete-coil__teeth:nth-child(5):after {
   content: -0.866025404;
 }
 .cassete-coil__teeth:nth-child(6) {
-  -webkit-transform: translateX(-0.45vw) translateY(1.8vw) rotate(-360deg);
-      -ms-transform: translateX(-0.45vw) translateY(1.8vw) rotate(-360deg);
-          transform: translateX(-0.45vw) translateY(1.8vw) rotate(-360deg);
+  -webkit-transform: translateX(-0.315vw) translateY(1.8vw) rotate(-360deg);
+      -ms-transform: translateX(-0.315vw) translateY(1.8vw) rotate(-360deg);
+          transform: translateX(-0.315vw) translateY(1.8vw) rotate(-360deg);
 }
 .cassete-coil__teeth:nth-child(6):after {
   content: 0;
+}
+@-webkit-keyframes coil {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(0);
+            transform: translateX(-50%) translateY(-50%) rotate(0);
+  }
+  50% {
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(180deg);
+            transform: translateX(-50%) translateY(-50%) rotate(180deg);
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(360deg);
+            transform: translateX(-50%) translateY(-50%) rotate(360deg);
+  }
+}
+@keyframes coil {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(0);
+            transform: translateX(-50%) translateY(-50%) rotate(0);
+  }
+  50% {
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(180deg);
+            transform: translateX(-50%) translateY(-50%) rotate(180deg);
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(360deg);
+            transform: translateX(-50%) translateY(-50%) rotate(360deg);
+  }
 }

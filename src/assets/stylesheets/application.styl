@@ -247,6 +247,15 @@ html
   top 50%
   border-radius 50%
   transform translate(-50%, -50%)
+  animation-name coil
+  animation-iteration-count infinite
+  animation-timing-function linear
+
+  &--size-big
+    animation-duration 2.2s
+
+  &--size-small
+    animation-duration 1.6s
 
 .cassete-coil__teeth
   width cassete-width * 0.015
@@ -258,6 +267,14 @@ html
 
   for i in (1..6)
     &:nth-child({i})
-      transform translateX(cassete-width * 0.05 * sin((PI * i) / 3) - cassete-width * 0.01) translateY(cassete-width * 0.05 * cos((PI * i) / 3) - cassete-width * 0.01) rotate(-60deg * i)
+      transform translateX(cassete-width * 0.05 * sin((PI * i) / 3) - cassete-width * 0.007) translateY(cassete-width * 0.05 * cos((PI * i) / 3) - cassete-width * 0.01) rotate(-60deg * i)
       &:after
         content sin((PI * i) / 3)
+
+@keyframes coil
+  0%
+    transform translateX(-50%) translateY(-50%) rotate(0)
+  50%
+    transform translateX(-50%) translateY(-50%) rotate(180deg)
+  100%
+    transform translateX(-50%) translateY(-50%) rotate(360deg)
