@@ -5,6 +5,8 @@ cassete-width = 45vw
 cassete-height = cassete-width * 0.638
 cassete-screw-padding = cassete-width * 0.005
 
+pi = 3.14
+
 
 html
   font-size 10px
@@ -225,18 +227,6 @@ html
   top 50%
   transform translateY(-50%)
 
-  &:after
-    content ''
-    display block
-    width cassete-width * 0.11
-    height cassete-width * 0.11
-    border 1px solid #000
-    position absolute
-    left 50%
-    top 50%
-    border-radius 50%
-    transform translate(-50%, -50%)
-
   &--type-left
     border-width cassete-width * 0.04
     left (-1) * (cassete-width * 0.05 + cassete-width * 0.04)
@@ -244,3 +234,30 @@ html
   &--type-right
     border-width cassete-width * 0.12
     right (-1) * (cassete-width * 0.05 + cassete-width * 0.12)
+
+.cassete-coil__gear
+  content ''
+  display block
+  width cassete-width * 0.22
+  height cassete-width * 0.22
+  background-color #fff
+  border cassete-width * 0.06 solid #ccc
+  position absolute
+  left 50%
+  top 50%
+  border-radius 50%
+  transform translate(-50%, -50%)
+
+.cassete-coil__teeth
+  width cassete-width * 0.015
+  height cassete-width * 0.02
+  background-color #ccc
+  position absolute
+  left 50%
+  top 50%
+
+  for i in (1..6)
+    &:nth-child({i})
+      transform translateX(cassete-width * 0.05 * sin((PI * i) / 3) - cassete-width * 0.01) translateY(cassete-width * 0.05 * cos((PI * i) / 3) - cassete-width * 0.01) rotate(-60deg * i)
+      &:after
+        content sin((PI * i) / 3)
